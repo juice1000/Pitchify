@@ -1,0 +1,14 @@
+{
+  "name": "pitchify",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/juice1000/phaze.git",
+  "author": "juice1000 <julienlook@gmx.de>",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "npm run mobile && npm run server && npm run client",
+    "mobile": "cd pitch-perfect-native-app && npm i && cd ..",
+    "server": "cd webview/server && npm i && cd ../..",
+    "client": "cd webview/src && npm i && cd ../.."
+  }
+}

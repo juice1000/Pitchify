@@ -6,12 +6,12 @@
   "author": "juice1000 <julienlook@gmx.de>",
   "license": "MIT",
   "scripts": {
-    "postinstall": "npm run mobile && npm run server && npm run client",
-    "mobile": "cd pitchify-native-app && npm i && cd ..",
-    "server": "cd pitchify-webview/server && npm i && cd ../..",
-    "client": "cd pitchify-webview/client && npm i && cd ../..",
-    "run-server": "cd pitchify-webview/server && npm run start-server",
-    "run-client": "cd pitchify-webview/client && npm run build-start",
-    "run-native-app": "cd pitchify-native-app && npm run start"
+    "postinstall": "npm run install:mobile && npm run install:server && npm run install:client",
+    "install:mobile": "cd pitchify-native-app && npm i && cd ..",
+    "install:server": "cd pitchify-webview/server && npm i && cd ../..",
+    "install:client": "cd pitchify-webview/client && npm i && cd ../..",
+    "start:server": "cd pitchify-webview/server && npm run start-server",
+    "start:client": "cd pitchify-webview/client && npm run build-start",
+    "start:native-app": "cd pitchify-native-app && npm run start"
   }
 }

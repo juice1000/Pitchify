@@ -33,9 +33,9 @@ in parent folder
 To run the whole mobile app locally, you need to launch from 3 separate Terminals:
 
 ```bash
-  npm run server
-  npm run client
-  nom run native-app
+  npm run start:server
+  npm run start:client
+  nom run start:native-app
 ```
 
 ## API Reference

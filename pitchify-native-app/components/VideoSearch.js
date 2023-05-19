@@ -16,7 +16,6 @@ export default function VideoSearch({ onSubmit, onReturnHome }) {
     key: API_KEY,
     q: '',
     type: 'video',
-    videoDuration: 'short',
     order: 'relevance',
     maxResults: 40,
   };

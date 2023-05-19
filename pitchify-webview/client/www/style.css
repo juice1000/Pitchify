@@ -8,7 +8,7 @@ html,
 body {
   height: 100%;
   background-color: rgb(25, 25, 25);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 /* we need overflow: hidden property for mobile app to prevent dragging webview  */
 

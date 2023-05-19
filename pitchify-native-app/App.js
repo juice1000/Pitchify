@@ -15,12 +15,6 @@ export default function App() {
   currentVideos = videos.slice();
   selectedVideo = videos.slice().find((v) => v.id.videoId === selectedVideoId);
   const webViewRef = useRef();
-  // const [cacheBuster, setCacheBuster] = useState(Date.now());
-  // function handleReload() {
-  //   //setCacheBuster(Date.now());
-  //   //webViewRef.current.clearCache(true);
-  //   webViewRef.current.reload();
-  // }
 
   function handleSelect(id) {
     setSelectedVideoId(id);
@@ -45,7 +39,7 @@ export default function App() {
         <Text style={styles.trackInterpreter}>{selectedVideo ? selectedVideo.snippet.channelTitle : 'test interpreter'}</Text>
         <WebView
           style={styles.webview}
-          source={{ uri: PRODUCTION_URL }} // needs to be replaced with the tunnel url when we test on iphone
+          source={{ uri: PRODUCTION_URL }} // needs to be replaced with an ngrok tunnel url when we test on iphone
           ref={(ref) => (webViewRef.current = ref)}
           incognito={true}
           onMessage={(event) => {

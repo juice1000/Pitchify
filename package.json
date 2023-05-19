@@ -7,8 +7,11 @@
   "license": "MIT",
   "scripts": {
     "postinstall": "npm run mobile && npm run server && npm run client",
-    "mobile": "cd pitch-perfect-native-app && npm i && cd ..",
-    "server": "cd webview/server && npm i && cd ../..",
-    "client": "cd webview/src && npm i && cd ../.."
+    "mobile": "cd pitchify-native-app && npm i && cd ..",
+    "server": "cd pitchify-webview/server && npm i && cd ../..",
+    "client": "cd pitchify-webview/client && npm i && cd ../..",
+    "run-server": "cd pitchify-webview/server && npm run start-server",
+    "run-client": "cd pitchify-webview/client && npm run build-start",
+    "run-native-app": "cd pitchify-native-app && npm run start"
   }
 }

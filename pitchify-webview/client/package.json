@@ -33,7 +33,6 @@
   "dependencies": {
     "child_process": "^1.0.2",
     "fft.js": "^4.0.3",
-    "nodemon": "^2.0.22",
     "sockette": "^2.0.6",
     "tone": "^14.7.77"
   },

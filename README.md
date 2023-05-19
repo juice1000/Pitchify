@@ -1,11 +1,15 @@
-
 # Project Title
 
 A mobile app that streams audio files from Youtube and enables pitch and speed manipulation through user interaction
 
-## Demo
+## Web Demo for you to try
+
+https://pitchify-client.netlify.app
+
+## Demo Video of the App
 
 https://youtu.be/tMG2V0y_Isw
+
 ## Installation
 
 Run
@@ -13,7 +17,9 @@ Run
 ```bash
   npm i && npm run postinstall
 ```
+
 in parent folder
+
 ## API Reference
 
 #### Fetch Youtube Data in Mobile App
@@ -22,8 +28,8 @@ in parent folder
   GET https://www.googleapis.com/youtube/v3/search
 ```
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
+| Parameter | Type     | Description                                          |
+| :-------- | :------- | :--------------------------------------------------- |
 | `API_KEY` | `string` | **Required**. You need to generate a Youtube API key |
 
 - [How to register your API key](https://developers.google.com/youtube/v3/getting-started?hl=de)
@@ -34,15 +40,10 @@ in parent folder
 
 - [AudioWorkletProcessor used for implementation](https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletProcessor)
 
-
-
-
 ## Authors
 
 - [@juice1000](https://www.github.com/juice1000)
 
-
 ## Acknowledgements
 
- - [Author doing original Audio Manipulation ](https://github.com/olvb)
-
+- [Author doing original Audio Manipulation ](https://github.com/olvb)

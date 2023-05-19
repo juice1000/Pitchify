@@ -4,9 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.18.2",
+    "nodemon": "^2.0.22",
     "ws": "^8.13.0",
-    "ytdl": "^1.4.1"
+    "ytdl-core": "^4.11.4"
   },
   "scripts": {
     "start": "node index.js",

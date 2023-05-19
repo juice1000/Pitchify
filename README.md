@@ -1,6 +1,6 @@
 # Project Title
 
-A mobile app that streams audio files from Youtube and enables pitch and speed manipulation through user interaction
+A mobile streaming app that plays music from YouTube and enables users to do pitch and speed manipulation.
 
 ## Web Demo for you to try
 
@@ -12,6 +12,14 @@ https://youtu.be/tMG2V0y_Isw
 
 ## Installation
 
+### Setup Expo Simulator
+
+In order to use a simulator for the mobile app, you'll need to install either [Xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) or [Android Studio](https://developer.android.com/studio)
+
+For Android Studio there's a bunch of extra configurations to be made in order to run it with Expo, check out [Expo's official documentation](https://docs.expo.dev/workflow/android-studio-emulator/) for more information.
+
+### Setup Local Environment
+
 Run
 
 ```bash
@@ -19,6 +27,16 @@ Run
 ```
 
 in parent folder
+
+## Run locally
+
+To run the whole mobile app locally, you need to launch from 3 separate Terminals:
+
+```bash
+  npm run server
+  npm run client
+  nom run native-app
+```
 
 ## API Reference
 

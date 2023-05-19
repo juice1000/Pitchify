@@ -20515,8 +20515,8 @@ const socketUrl = 'wss://pitchify-server.fly.dev/';
 let wsLoaded = false;
 
 const ws = new Sockette(socketUrl, {
-  timeout: 5e3,
-  maxAttempts: 10,
+  timeout: 2000,
+  maxAttempts: 3,
   onopen: (e) => {
     console.log('Connected', e);
     wsLoaded = true;
@@ -20541,20 +20541,6 @@ let loader = new wavesLoaders.AudioBufferLoader();
 
 var speedFactor = 1.0;
 var pitchFactor = 1.0;
-
-// function init() {
-//   // let $startLocal = document.querySelector('#start-local');
-//   // $startLocal.addEventListener('click', handleLocalFile);
-//   // let $testServer = document.querySelector('#test-server');
-//   // $testServer.addEventListener('click', () => {
-//   //   console.log('clicked, sending data');
-//   //   ws.send(`https://www.youtube.com/watch?v=R5i3tAcCcd0`);
-//   // });
-//   while (!wsLoaded) {
-//     console.log('waiting');
-//   }
-//   ws.send(`https://www.youtube.com/watch?v=R5i3tAcCcd0`);
-// }
 
 async function receiveBufferFromServer(event) {
   const audioContext = new AudioContext();
@@ -20767,24 +20753,20 @@ function setupTimeline(buffer, playControl) {
 
 // const message = { data: 'R5i3tAcCcd0 ' };
 window.addEventListener('load', () => {
-  window.addEventListener('message', async (message) => {
-    // for debugging of local files
-    if (message.data === 'use_local_track') {
-      handleLocalFile();
-    } else {
-      await waitForConnection();
-      ws.send(`https://www.youtube.com/watch?v=${message.data}`);
-    }
-    if (window.ReactNativeWebView) {
+  if (window.ReactNativeWebView) {
+    window.addEventListener('message', async (message) => {
+      // for debugging of local files
+      if (message.data === 'use_local_track') {
+        handleLocalFile();
+      } else {
+        await waitForConnection();
+        ws.send(`https://www.youtube.com/watch?v=${message.data}`);
+      }
       window.ReactNativeWebView.postMessage('Passed on data to server');
-    }
-  });
-
-  // that's for a web demo
-  if (!window.ReactNativeWebView) {
-    if (message.data === 'use_local_track') {
-      handleLocalFile();
-    }
+    });
+  } else {
+    // that's for a web demo
+    handleLocalFile();
   }
 });
 

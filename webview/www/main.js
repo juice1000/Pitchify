@@ -20768,6 +20768,7 @@ function setupTimeline(buffer, playControl) {
 // const message = { data: 'R5i3tAcCcd0 ' };
 window.addEventListener('load', () => {
   window.addEventListener('message', async (message) => {
+    // for debugging of local files
     if (message.data === 'use_local_track') {
       handleLocalFile();
     } else {
@@ -20778,6 +20779,13 @@ window.addEventListener('load', () => {
       window.ReactNativeWebView.postMessage('Passed on data to server');
     }
   });
+
+  // that's for a web demo
+  if (!window.ReactNativeWebView) {
+    if (message.data === 'use_local_track') {
+      handleLocalFile();
+    }
+  }
 });
 
 // Will keep this in case anything breaks, but as of now Tone JS is not as good as the phazer package

@@ -8,7 +8,7 @@ https://pitchify-client.netlify.app
 
 ## Demo Video of the App
 
-https://youtu.be/tMG2V0y_Isw
+[![Watch the video](https://img.youtube.com/vi/nTQUwghvy5Q/default.jpg)](https://youtu.be/tMG2V0y_Isw)
 
 ## Installation
 

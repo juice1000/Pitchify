@@ -8,7 +8,7 @@ https://pitchify-client.netlify.app
 
 ## Demo Video of the App
 
-![Watch the video](demo.gif | width=200)
+<img src="demo.gif" width="200">
 
 ## Installation
 

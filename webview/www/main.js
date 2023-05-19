@@ -20515,8 +20515,8 @@ const socketUrl = 'wss://pitchify-server.fly.dev/';
 let wsLoaded = false;
 
 const ws = new Sockette(socketUrl, {
-  timeout: 2000,
-  maxAttempts: 3,
+  timeout: 5000,
+  maxAttempts: 5,
   onopen: (e) => {
     console.log('Connected', e);
     wsLoaded = true;
@@ -20755,7 +20755,7 @@ function setupTimeline(buffer, playControl) {
 window.addEventListener('load', () => {
   if (window.ReactNativeWebView) {
     window.addEventListener('message', async (message) => {
-      // for debugging of local files
+      // for debugging the app
       if (message.data === 'use_local_track') {
         handleLocalFile();
       } else {
@@ -20765,7 +20765,8 @@ window.addEventListener('load', () => {
       window.ReactNativeWebView.postMessage('Passed on data to server');
     });
   } else {
-    // that's for a web demo
+    // that's for the web demo
+    document.body.style.overflow = 'scroll';
     handleLocalFile();
   }
 });

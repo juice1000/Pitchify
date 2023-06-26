@@ -4,7 +4,7 @@ A mobile streaming app that plays music from YouTube and enables users to do pit
 
 ## Web Demo for you to try
 
-https://pitchify-client.netlify.app
+https://pitchify-demo.netlify.app
 
 ## Demo Video of the App
 
